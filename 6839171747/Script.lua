@@ -1,3 +1,18 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = true, SaveConfig = true, IntroEnabled = false, })
+
+OrionLib:MakeNotification({
+	Name = "Welcome!",
+	Content = "You are Logged in as "..Player.Name..".",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+getgenv().Key = "Doors" -- the key for the script 
+getgenv().Keyinput = "string"
+
+function MakeScriptHub()
 if game.PlaceId == 6839171747 then
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
     local Window = OrionLib:MakeWindow({Name = "NSD HUB Doors Script", HidePremium = false, IntroEnabled = true,IntroText = "Welcome Back NSD", SaveConfig = true, ConfigFolder = "DoorsTest"})
